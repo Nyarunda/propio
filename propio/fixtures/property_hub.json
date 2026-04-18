@@ -1,0 +1,163 @@
+{
+ "doctype": "Workspace",
+ "name": "Property Hub",
+ "label": "Property Hub",
+ "icon": "building-2",
+ "module": "Property",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 10,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Property Manager"
+  },
+  {
+   "role": "Portfolio Director"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Property Hub</span><span class=\\\"text-muted ml-2\\\">Portfolio and unit operations</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Property\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Unit\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Lease\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Tenant\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Key Metrics</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Properties\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Units\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Occupied Units\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Vacant Units\", \"col\": 2}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Occupancy Rate\", \"col\": 2}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Operations</b>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Masters\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Finance\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Portfolio Insights</b>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Occupancy Chart\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Property Status Distribution\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Unit Mix Analysis\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "label": "New Property",
+   "link_to": "Property",
+   "type": "DocType"
+  },
+  {
+   "label": "New Unit",
+   "link_to": "Unit",
+   "type": "DocType"
+  },
+  {
+   "label": "New Lease",
+   "link_to": "Lease",
+   "type": "DocType"
+  },
+  {
+   "label": "New Tenant",
+   "link_to": "Tenant",
+   "type": "DocType"
+  }
+ ],
+ "number_cards": [
+  {
+   "number_card_name": "Total Properties"
+  },
+  {
+   "number_card_name": "Total Units"
+  },
+  {
+   "number_card_name": "Occupied Units"
+  },
+  {
+   "number_card_name": "Vacant Units"
+  },
+  {
+   "number_card_name": "Occupancy Rate"
+  }
+ ],
+ "charts": [
+  {
+   "chart_name": "Occupancy Chart"
+  },
+  {
+   "chart_name": "Property Status Distribution"
+  },
+  {
+   "chart_name": "Unit Mix Analysis"
+  }
+ ],
+ "links": [
+  {
+   "label": "Masters",
+   "type": "Card Break"
+  },
+  {
+   "label": "Property",
+   "link_to": "Property",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Unit",
+   "link_to": "Unit",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Tenant",
+   "link_to": "Tenant",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner",
+   "link_to": "Owner",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Property Ownership",
+   "link_to": "Property Ownership",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Operations",
+   "type": "Card Break"
+  },
+  {
+   "label": "Lease",
+   "link_to": "Lease",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Work Order",
+   "link_to": "Work Order",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Reports",
+   "type": "Card Break"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Performance Report",
+   "link_to": "Collections Performance Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement Register",
+   "link_to": "Owner Statement Register",
+   "link_type": "Report",
+   "type": "Link"
+  }
+ ],
+ "title": "Property Hub",
+ "type": "Workspace"
+}

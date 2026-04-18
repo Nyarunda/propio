@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    body { font-family: Arial, sans-serif; font-size: 12px; }
+    h2, h3 { margin-bottom: 4px; }
+    table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    th, td { border: 1px solid #ddd; padding: 6px; text-align: left; }
+    .right { text-align: right; }
+  </style>
+</head>
+<body>
+  <h2>Owner Statement {{ doc.name }}</h2>
+  <p><strong>Owner:</strong> {{ doc.owner }}</p>
+  <p><strong>Property:</strong> {{ doc.property }}</p>
+  <p><strong>Period:</strong> {{ frappe.utils.format_date(doc.period_from) }} - {{ frappe.utils.format_date(doc.period_to) }}</p>
+
+  <table>
+    <tr><th>Metric</th><th class="right">Amount</th></tr>
+    <tr><td>Rent Collected</td><td class="right">{{ frappe.utils.fmt_money(doc.rent_collected, currency=doc.currency) }}</td></tr>
+    <tr><td>Total Expenses</td><td class="right">{{ frappe.utils.fmt_money(doc.total_expenses, currency=doc.currency) }}</td></tr>
+    <tr><td>Management Fee</td><td class="right">{{ frappe.utils.fmt_money(doc.management_fee, currency=doc.currency) }}</td></tr>
+    <tr><td>Net Operating Income</td><td class="right">{{ frappe.utils.fmt_money(doc.net_operating_income, currency=doc.currency) }}</td></tr>
+    <tr><td>Payout Due</td><td class="right">{{ frappe.utils.fmt_money(doc.payout_due, currency=doc.currency) }}</td></tr>
+  </table>
+</body>
+</html>

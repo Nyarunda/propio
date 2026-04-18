@@ -1,0 +1,65 @@
+[
+ {
+  "doctype": "Role",
+  "name": "Property Manager",
+  "role_name": "Property Manager",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Leasing Officer",
+  "role_name": "Leasing Officer",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Maintenance Coordinator",
+  "role_name": "Maintenance Coordinator",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Accountant",
+  "role_name": "Accountant",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Collections Officer",
+  "role_name": "Collections Officer",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Owner",
+  "role_name": "Owner",
+  "desk_access": 0,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "Portfolio Director",
+  "role_name": "Portfolio Director",
+  "desk_access": 1,
+  "is_custom": 1
+ },
+ {
+  "doctype": "Role",
+  "name": "System Manager",
+  "role_name": "System Manager",
+  "desk_access": 1,
+  "is_custom": 0
+ },
+ {
+  "doctype": "Role",
+  "name": "Administrator",
+  "role_name": "Administrator",
+  "desk_access": 1,
+  "is_custom": 0
+ }
+]

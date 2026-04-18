@@ -1,0 +1,13 @@
+{
+ "doctype": "Number Card",
+ "name": "Broken Promises",
+ "label": "Broken Promises",
+ "document_type": "Arrears Case",
+ "function": "Count",
+ "type": "Document Type",
+ "is_public": 1,
+ "module": "Collections",
+ "show_percentage_stats": 0,
+ "filters_json": "[[\"Arrears Case\",\"promise_to_pay_date\",\"<\",\"Today\",false],[\"Arrears Case\",\"stage\",\"=\",\"Promise to Pay\",false]]",
+ "color": "#e74c3c"
+}

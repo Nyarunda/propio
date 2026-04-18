@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Collections Performance Report",
+ "report_name": "Collections Performance Report",
+ "ref_doctype": "Payment Intake",
+ "report_type": "Script Report",
+ "module": "Collections",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "Collections Officer"},
+  {"role": "Accountant"},
+  {"role": "Portfolio Director"}
+ ]
+}

@@ -1,0 +1,117 @@
+{
+ "doctype": "DocType",
+ "name": "Property Ownership",
+ "module": "Owner",
+ "custom": 0,
+ "istable": 0,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "format:POWN-{YYYY}-{#####}",
+ "title_field": "property",
+ "search_fields": "property,owner",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "property",
+   "label": "Property",
+   "fieldtype": "Link",
+   "options": "Property",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "owner",
+   "label": "Owner",
+   "fieldtype": "Link",
+   "options": "Owner",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_share",
+   "label": "Ownership Share",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "ownership_percentage",
+   "label": "Ownership Percentage",
+   "fieldtype": "Percent",
+   "reqd": 1,
+   "default": "100",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "primary_owner",
+   "label": "Primary Owner",
+   "fieldtype": "Check",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "sb_dates",
+   "label": "Validity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_dates_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nActive\nInactive",
+   "default": "Active",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Portfolio Director",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

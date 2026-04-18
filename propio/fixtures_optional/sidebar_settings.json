@@ -1,0 +1,51 @@
+{
+ "doctype": "System Settings",
+ "sidebar_items": [
+  {
+   "item": "Dashboard",
+   "type": "Workspace",
+   "order": 10
+  },
+  {
+   "item": "Property Hub",
+   "type": "Workspace",
+   "order": 20
+  },
+  {
+   "item": "Leasing Desk",
+   "type": "Workspace",
+   "order": 30
+  },
+  {
+   "item": "Maintenance Desk",
+   "type": "Workspace",
+   "order": 40
+  },
+  {
+   "item": "Finance Hub",
+   "type": "Workspace",
+   "order": 50
+  },
+  {
+   "item": "Collections Desk",
+   "type": "Workspace",
+   "order": 60
+  },
+  {
+   "item": "Owner Hub",
+   "type": "Workspace",
+   "order": 70
+  },
+  {
+   "item": "Reports",
+   "type": "Workspace",
+   "order": 80
+  },
+  {
+   "item": "Configuration",
+   "type": "Workspace",
+   "order": 90
+  }
+ ],
+ "name": "System Settings"
+}

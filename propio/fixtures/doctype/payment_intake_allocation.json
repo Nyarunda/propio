@@ -1,0 +1,40 @@
+{
+ "doctype": "DocType",
+ "name": "Payment Intake Allocation",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "invoice",
+   "label": "Invoice",
+   "fieldtype": "Link",
+   "options": "Sales Invoice",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "allocated_amount",
+   "label": "Allocated Amount",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "allocation_date",
+   "label": "Allocation Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "default": "Today"
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nPending\nApplied\nReversed",
+   "default": "Pending",
+   "in_list_view": 1
+  }
+ ]
+}

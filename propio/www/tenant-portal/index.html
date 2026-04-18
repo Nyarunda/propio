@@ -1,0 +1,17 @@
+{% extends "templates/portal/portal_base.html" %}
+
+{% block title %}Tenant Portal{% endblock %}
+
+{% block head %}
+<link rel="preload" href="/assets/propio/tenant-portal/dist/tenant-portal.css?v={{ build_version }}" as="style">
+<link rel="stylesheet" href="/assets/propio/tenant-portal/dist/tenant-portal.css?v={{ build_version }}">
+{% endblock %}
+
+{% block content %}
+<div id="app"></div>
+<noscript>Please enable JavaScript to use the Tenant Portal.</noscript>
+{% endblock %}
+
+{% block scripts %}
+<script type="module" src="/assets/propio/tenant-portal/dist/tenant-portal.js?v={{ build_version }}"></script>
+{% endblock %}

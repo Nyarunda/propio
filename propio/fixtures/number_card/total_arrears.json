@@ -1,0 +1,15 @@
+{
+ "doctype": "Number Card",
+ "name": "Total Arrears",
+ "label": "Total Arrears",
+ "document_type": "Sales Invoice",
+ "function": "Sum",
+ "type": "Document Type",
+ "is_public": 1,
+ "module": "Collections",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Daily",
+ "aggregate_function_based_on": "outstanding_amount",
+ "filters_json": "[[\"Sales Invoice\",\"docstatus\",\"=\",1,false],[\"Sales Invoice\",\"outstanding_amount\",\">\",0,false]]",
+ "color": "#e74c3c"
+}

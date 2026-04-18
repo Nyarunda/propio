@@ -1,0 +1,274 @@
+{
+ "doctype": "DocType",
+ "name": "Property",
+ "module": "Property",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "format:PROP-{YYYY}-{#####}",
+ "title_field": "property_name",
+ "search_fields": "property_code,property_name,city",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "property_code",
+   "label": "Property Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "property_name",
+   "label": "Property Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nDraft\nActive\nInactive\nUnder Maintenance\nArchived",
+   "default": "Draft",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_basic",
+   "label": "Basic Information",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "portfolio",
+   "label": "Portfolio",
+   "fieldtype": "Link",
+   "options": "Portfolio",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb_basic_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property_type",
+   "label": "Property Type",
+   "fieldtype": "Select",
+   "options": "\nResidential\nCommercial\nMixed Use\nIndustrial\nRetail\nOffice\nLand\nOther",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "management_type",
+   "label": "Management Type",
+   "fieldtype": "Select",
+   "options": "\nOwned\nManaged\nHybrid",
+   "default": "Managed",
+   "reqd": 1
+  },
+  {
+   "fieldname": "ownership_type",
+   "label": "Ownership Type",
+   "fieldtype": "Select",
+   "options": "\nSingle Owner\nMultiple Owners\nSPV\nREIT\nOther"
+  },
+  {
+   "fieldname": "sb_location",
+   "label": "Location",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "country",
+   "label": "Country",
+   "fieldtype": "Link",
+   "options": "Country",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "city",
+   "label": "City",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb_location_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "address_line_1",
+   "label": "Address Line 1",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "address_line_2",
+   "label": "Address Line 2",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "postal_code",
+   "label": "Postal Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "latitude",
+   "label": "Latitude",
+   "fieldtype": "Float",
+   "precision": "8"
+  },
+  {
+   "fieldname": "longitude",
+   "label": "Longitude",
+   "fieldtype": "Float",
+   "precision": "8"
+  },
+  {
+   "fieldname": "sb_area",
+   "label": "Area Details",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "gross_area",
+   "label": "Gross Area (sqm)",
+   "fieldtype": "Float",
+   "precision": "2"
+  },
+  {
+   "fieldname": "lettable_area",
+   "label": "Lettable Area (sqm)",
+   "fieldtype": "Float",
+   "precision": "2"
+  },
+  {
+   "fieldname": "cb_area_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "opening_date",
+   "label": "Opening Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "closing_date",
+   "label": "Closing Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "sb_accounting",
+   "label": "Accounting Defaults",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "default_cost_center",
+   "label": "Default Cost Center",
+   "fieldtype": "Link",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "default_income_account",
+   "label": "Default Income Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "cb_accounting_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_expense_account",
+   "label": "Default Expense Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_deposit_account",
+   "label": "Default Deposit Account",
+   "fieldtype": "Link",
+   "options": "Account"
+  },
+  {
+   "fieldname": "sb_notes",
+   "label": "Notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Portfolio Director",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Property Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Leasing Officer",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Maintenance Coordinator",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

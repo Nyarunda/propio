@@ -1,0 +1,142 @@
+{
+ "doctype": "Workspace",
+ "name": "Owner Hub",
+ "label": "Owner Hub",
+ "icon": "users",
+ "module": "Owner",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 60,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Portfolio Director"
+  },
+  {
+   "role": "Accountant"
+  },
+  {
+   "role": "Owner"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Owner Hub</span><span class=\\\"text-muted ml-2\\\">Owner agreements, statements, and payouts</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Owner\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Agreement\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Generate Fee Run\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Owner Statement\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Key Metrics</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Owners\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Agreements\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Fees This Month\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Payouts\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Owner Operations</b>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"My Portfolio\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Finance\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Documents\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Insights</b>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Management Fee Trend\", \"col\": 6}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Revenue Trend\", \"col\": 6}}]",
+ "number_cards": [
+  {
+   "number_card_name": "Active Owners"
+  },
+  {
+   "number_card_name": "Active Agreements"
+  },
+  {
+   "number_card_name": "Fees This Month"
+  },
+  {
+   "number_card_name": "Pending Payouts"
+  }
+ ],
+ "charts": [
+  {
+   "chart_name": "Management Fee Trend"
+  },
+  {
+   "chart_name": "Revenue Trend"
+  }
+ ],
+ "links": [
+  {
+   "label": "My Portfolio",
+   "type": "Card Break"
+  },
+  {
+   "label": "Property",
+   "link_to": "Property",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Property Ownership",
+   "link_to": "Property Ownership",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner",
+   "link_to": "Owner",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Finance",
+   "type": "Card Break"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Management Agreement",
+   "link_to": "Management Agreement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Reports",
+   "type": "Card Break"
+  },
+  {
+   "label": "Owner Statement Register",
+   "link_to": "Owner Statement Register",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Performance Report",
+   "link_to": "Collections Performance Report",
+   "link_type": "Report",
+   "type": "Link"
+  }
+ ],
+ "title": "Owner Hub",
+ "type": "Workspace",
+ "shortcuts": [
+  {
+   "label": "New Owner",
+   "link_to": "Owner",
+   "type": "DocType"
+  },
+  {
+   "label": "New Agreement",
+   "link_to": "Management Agreement",
+   "type": "DocType"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "type": "DocType"
+  },
+  {
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "type": "DocType"
+  }
+ ]
+}

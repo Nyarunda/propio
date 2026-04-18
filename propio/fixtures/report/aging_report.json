@@ -1,0 +1,15 @@
+{
+ "doctype": "Report",
+ "name": "Aging Report",
+ "report_name": "Aging Report",
+ "ref_doctype": "Sales Invoice",
+ "report_type": "Script Report",
+ "module": "Collections",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "Accountant"},
+  {"role": "Collections Officer"},
+  {"role": "Property Manager"},
+  {"role": "Portfolio Director"}
+ ]
+}

@@ -1,0 +1,267 @@
+{
+ "doctype": "DocType",
+ "name": "Lease",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 1,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "format:LEASE-{YYYY}-{#####}",
+ "title_field": "lease_no",
+ "search_fields": "lease_no,tenant,property",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "lease_no",
+   "label": "Lease No",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "approval_status",
+   "label": "Approval Status",
+   "fieldtype": "Select",
+   "options": "\nDraft\nPending Approval\nApproved\nRejected",
+   "default": "Draft",
+   "reqd": 1,
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nDraft\nPending Approval\nApproved\nActive\nExpiring Soon\nRenewed\nTerminated\nClosed\nRejected",
+   "default": "Draft",
+   "reqd": 1,
+   "read_only": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_header",
+   "label": "Lease Header",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "portfolio",
+   "label": "Portfolio",
+   "fieldtype": "Link",
+   "options": "Portfolio",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "cb_header_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "property",
+   "label": "Property",
+   "fieldtype": "Link",
+   "options": "Property",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "building",
+   "label": "Building",
+   "fieldtype": "Link",
+   "options": "Building"
+  },
+  {
+   "fieldname": "tenant",
+   "label": "Tenant",
+   "fieldtype": "Link",
+   "options": "Tenant",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_type",
+   "label": "Type & Dates",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lease_type",
+   "label": "Lease Type",
+   "fieldtype": "Select",
+   "options": "\nNew\nRenewal\nAmendment\nSublease\nShort Term\nOther",
+   "reqd": 1
+  },
+  {
+   "fieldname": "lease_category",
+   "label": "Lease Category",
+   "fieldtype": "Select",
+   "options": "\nResidential\nCommercial\nRetail\nIndustrial\nCorporate Occupier",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "currency",
+   "label": "Currency",
+   "fieldtype": "Link",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_type_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "commencement_date",
+   "label": "Commencement Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "handover_date",
+   "label": "Handover Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "sb_terms",
+   "label": "Terms",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "notice_period_days",
+   "label": "Notice Period (Days)",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "billing_cycle",
+   "label": "Billing Cycle",
+   "fieldtype": "Select",
+   "options": "\nMonthly\nQuarterly\nSemi-Annual\nAnnual\nCustom",
+   "default": "Monthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "payment_terms_template",
+   "label": "Payment Terms Template",
+   "fieldtype": "Link",
+   "options": "Payment Terms Template"
+  },
+  {
+   "fieldname": "cb_terms_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deposit_amount",
+   "label": "Deposit Amount",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "default": "0"
+  },
+  {
+   "fieldname": "grace_period_days",
+   "label": "Grace Period (Days)",
+   "fieldtype": "Int",
+   "default": "0"
+  },
+  {
+   "fieldname": "parent_lease",
+   "label": "Parent Lease",
+   "fieldtype": "Link",
+   "options": "Lease"
+  },
+  {
+   "fieldname": "version_no",
+   "label": "Version No",
+   "fieldtype": "Int",
+   "default": "1",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_units",
+   "label": "Lease Units",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lease_units",
+   "label": "Lease Units",
+   "fieldtype": "Table",
+   "options": "Lease Unit",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_charges",
+   "label": "Lease Charges",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lease_charges",
+   "label": "Lease Charges",
+   "fieldtype": "Table",
+   "options": "Lease Charge"
+  },
+  {
+   "fieldname": "sb_escalation",
+   "label": "Escalation Rules",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "escalation_rules",
+   "label": "Escalation Rules",
+   "fieldtype": "Table",
+   "options": "Lease Escalation"
+  },
+  {
+   "fieldname": "sb_documents",
+   "label": "Lease Documents",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "lease_documents",
+   "label": "Lease Documents",
+   "fieldtype": "Table",
+   "options": "Lease Document"
+  },
+  {
+   "fieldname": "sb_notes",
+   "label": "Notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {"role": "System Manager", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Administrator", "read": 1, "write": 1, "create": 1, "delete": 1},
+  {"role": "Portfolio Director", "read": 1, "write": 1, "create": 1, "delete": 0},
+  {"role": "Property Manager", "read": 1, "write": 1, "create": 1, "delete": 0},
+  {"role": "Leasing Officer", "read": 1, "write": 1, "create": 1, "delete": 0},
+  {"role": "Accountant", "read": 1, "write": 0, "create": 0, "delete": 0}
+ ]
+}

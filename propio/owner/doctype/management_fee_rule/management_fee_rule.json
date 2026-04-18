@@ -1,0 +1,93 @@
+{
+ "doctype": "DocType",
+ "name": "Management Fee Rule",
+ "module": "Owner",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "fee_type",
+   "label": "Fee Type",
+   "fieldtype": "Select",
+   "options": "\nManagement Fee\nLeasing Commission\nRenewal Fee\nMaintenance Supervision\nProject Management\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "calculation_method",
+   "label": "Calculation Method",
+   "fieldtype": "Select",
+   "options": "\nPercentage\nFixed Amount\nPer Unit\nHybrid\nTiered",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "basis",
+   "label": "Basis",
+   "fieldtype": "Select",
+   "options": "\nRent Collected\nRent Billed\nTotal Collected\nOccupied Units\nTotal Units\nLease Value\nMaintenance Cost\nCustom Formula",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "percentage_rate",
+   "label": "Percentage Rate (%)",
+   "fieldtype": "Percent",
+   "mandatory_depends_on": "eval:doc.calculation_method == 'Percentage'"
+  },
+  {
+   "fieldname": "fixed_amount",
+   "label": "Fixed Amount",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "mandatory_depends_on": "eval:doc.calculation_method == 'Fixed Amount'"
+  },
+  {
+   "fieldname": "per_unit_amount",
+   "label": "Per Unit Amount",
+   "fieldtype": "Currency",
+   "options": "currency",
+   "mandatory_depends_on": "eval:doc.calculation_method == 'Per Unit'"
+  },
+  {
+   "fieldname": "tier_from",
+   "label": "Tier From",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "tier_to",
+   "label": "Tier To",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "minimum_fee",
+   "label": "Minimum Fee",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "maximum_fee",
+   "label": "Maximum Fee",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "frequency",
+   "label": "Frequency",
+   "fieldtype": "Select",
+   "options": "\nMonthly\nQuarterly\nAnnual\nOne Time",
+   "default": "Monthly"
+  },
+  {
+   "fieldname": "effective_from",
+   "label": "Effective From",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "effective_to",
+   "label": "Effective To",
+   "fieldtype": "Date"
+  }
+ ]
+}

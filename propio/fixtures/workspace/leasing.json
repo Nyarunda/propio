@@ -1,0 +1,41 @@
+{
+ "doctype": "Workspace",
+ "name": "Leasing",
+ "label": "Leasing",
+ "icon": "file-text",
+ "module": "Leasing",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 20,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"},
+  {"role": "Portfolio Director"},
+  {"role": "Property Manager"},
+  {"role": "Leasing Officer"}
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Leasing Command Center</span><span class=\\\"text-muted ml-2\\\">Lease lifecycle operations</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Lease\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lease Register\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lease Charges\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Leasing KPIs</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Leases\", \"col\": 6}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Expiring Leases\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Lease Expiry Trend\", \"col\": 12}}]",
+ "shortcuts": [
+  {"label": "New Lease", "link_to": "Lease", "type": "DocType"},
+  {"label": "Lease Register", "link_to": "Lease", "type": "DocType"},
+  {"label": "Lease Charges", "link_to": "Lease Charge", "type": "DocType"}
+ ],
+ "number_cards": [
+  {"number_card_name": "Active Leases"},
+  {"number_card_name": "Expiring Leases"}
+ ],
+ "charts": [
+  {"chart_name": "Lease Expiry Trend"}
+ ],
+ "links": [
+  {"label": "Leasing", "type": "Card Break"},
+  {"label": "Lease", "link_to": "Lease", "link_type": "DocType", "type": "Link"},
+  {"label": "Lease Charge", "link_to": "Lease Charge", "link_type": "DocType", "type": "Link"},
+  {"label": "Lease Escalation", "link_to": "Lease Escalation", "link_type": "DocType", "type": "Link"},
+  {"label": "Lease Document", "link_to": "Lease Document", "link_type": "DocType", "type": "Link"},
+  {"label": "Reports", "type": "Card Break"},
+  {"label": "Aging Report", "link_to": "Aging Report", "link_type": "Report", "type": "Link"}
+ ],
+ "title": "Leasing",
+ "type": "Workspace"
+}

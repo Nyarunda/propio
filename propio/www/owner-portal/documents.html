@@ -1,0 +1,23 @@
+{% extends "templates/portal/portal_base.html" %}
+
+{% block title %}Owner Documents{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <h1 class="h3 mb-1">Documents</h1>
+  <p class="text-muted mb-4">Statements and property documents available to you.</p>
+
+  <div class="card shadow-sm">
+    <div class="list-group list-group-flush">
+      {% for f in files %}
+      <a class="list-group-item list-group-item-action d-flex justify-content-between align-items-center" href="{{ f.file_url }}" target="_blank">
+        <span>{{ f.file_name }}</span>
+        <small class="text-muted">{{ frappe.utils.pretty_date(f.creation) }}</small>
+      </a>
+      {% else %}
+      <div class="list-group-item text-muted">No documents found</div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+{% endblock %}

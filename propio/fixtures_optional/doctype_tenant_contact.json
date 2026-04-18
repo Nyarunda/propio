@@ -1,0 +1,56 @@
+{
+ "doctype": "DocType",
+ "name": "Tenant Contact",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "contact_name",
+   "label": "Contact Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "role",
+   "label": "Role",
+   "fieldtype": "Select",
+   "options": "\nPrimary\nBilling\nLegal\nOperations\nEmergency\nOther",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "email",
+   "label": "Email",
+   "fieldtype": "Data",
+   "options": "Email",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "phone",
+   "label": "Phone",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "mobile",
+   "label": "Mobile",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "is_primary",
+   "label": "Is Primary",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_billing_contact",
+   "label": "Is Billing Contact",
+   "fieldtype": "Check"
+  },
+  {
+   "fieldname": "is_escalation_contact",
+   "label": "Is Escalation Contact",
+   "fieldtype": "Check"
+  }
+ ]
+}

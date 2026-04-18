@@ -1,0 +1,11 @@
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.sqlite3
+.DS_Store
+/sites/assets/
+/sites/*/private/files/
+/sites/*/public/files/
+node_modules

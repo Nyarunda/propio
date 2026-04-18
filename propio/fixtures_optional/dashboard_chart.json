@@ -1,0 +1,76 @@
+[
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Occupancy Chart",
+  "chart_name": "Occupancy Chart",
+  "chart_type": "Group By",
+  "document_type": "Unit",
+  "based_on": "occupancy_status",
+  "group_by_type": "Count",
+  "type": "Pie",
+  "is_public": 1,
+  "module": "Propio"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Lease Expiry Trend",
+  "chart_name": "Lease Expiry Trend",
+  "chart_type": "Group By",
+  "document_type": "Lease",
+  "based_on": "end_date",
+  "group_by_type": "Count",
+  "type": "Line",
+  "is_public": 1,
+  "module": "Propio",
+  "time_interval": "Monthly",
+  "timespan": "Last Year"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Revenue Trend",
+  "chart_name": "Revenue Trend",
+  "chart_type": "Group By",
+  "document_type": "Rent Invoice",
+  "based_on": "posting_date",
+  "group_by_type": "Sum",
+  "aggregate_function": "Sum",
+  "aggregate_field": "grand_total",
+  "type": "Line",
+  "is_public": 1,
+  "module": "Propio",
+  "time_interval": "Monthly",
+  "timespan": "Last Year"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Maintenance by Type",
+  "chart_name": "Maintenance by Type",
+  "chart_type": "Group By",
+  "document_type": "Service Request",
+  "based_on": "request_type",
+  "group_by_type": "Count",
+  "type": "Bar",
+  "is_public": 1,
+  "module": "Propio"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Arrears Aging",
+  "chart_name": "Arrears Aging",
+  "chart_type": "Custom",
+  "document_type": "Arrears Case",
+  "type": "Bar",
+  "is_public": 1,
+  "module": "Propio"
+ },
+ {
+  "doctype": "Dashboard Chart",
+  "name": "Property Performance",
+  "chart_name": "Property Performance",
+  "chart_type": "Custom",
+  "document_type": "Property",
+  "type": "Bar",
+  "is_public": 1,
+  "module": "Propio"
+ }
+]

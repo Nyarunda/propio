@@ -1,0 +1,47 @@
+{
+ "doctype": "DocType",
+ "name": "Lease Document",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "document_type",
+   "label": "Document Type",
+   "fieldtype": "Select",
+   "options": "\nLease Agreement\nAddendum\nRider\nKYC\nID Proof\nBank Guarantee\nInsurance\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "file",
+   "label": "File",
+   "fieldtype": "Attach"
+  },
+  {
+   "fieldname": "version",
+   "label": "Version",
+   "fieldtype": "Int"
+  },
+  {
+   "fieldname": "signed_date",
+   "label": "Signed Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "received_date",
+   "label": "Received Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "expiry_date",
+   "label": "Expiry Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "remarks",
+   "label": "Remarks",
+   "fieldtype": "Small Text"
+  }
+ ]
+}

@@ -1,0 +1,44 @@
+[
+ {
+  "doctype": "Role Profile",
+  "name": "Property Operations Profile",
+  "role_profile": "Property Operations Profile",
+  "roles": [
+   {"role": "Property Manager"},
+   {"role": "Maintenance Coordinator"}
+  ]
+ },
+ {
+  "doctype": "Role Profile",
+  "name": "Leasing Profile",
+  "role_profile": "Leasing Profile",
+  "roles": [
+   {"role": "Leasing Officer"}
+  ]
+ },
+ {
+  "doctype": "Role Profile",
+  "name": "Finance Profile",
+  "role_profile": "Finance Profile",
+  "roles": [
+   {"role": "Accountant"},
+   {"role": "Collections Officer"}
+  ]
+ },
+ {
+  "doctype": "Role Profile",
+  "name": "Owner Portal Profile",
+  "role_profile": "Owner Portal Profile",
+  "roles": [
+   {"role": "Owner"}
+  ]
+ },
+ {
+  "doctype": "Role Profile",
+  "name": "Executive Profile",
+  "role_profile": "Executive Profile",
+  "roles": [
+   {"role": "Portfolio Director"}
+  ]
+ }
+]

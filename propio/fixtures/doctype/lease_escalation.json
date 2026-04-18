@@ -1,0 +1,64 @@
+{
+ "doctype": "DocType",
+ "name": "Lease Escalation",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "charge_type",
+   "label": "Charge Type",
+   "fieldtype": "Select",
+   "options": "\nBase Rent\nService Charge\nCAM\nOther",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "escalation_method",
+   "label": "Escalation Method",
+   "fieldtype": "Select",
+   "options": "\nPercentage\nFixed Amount\nCPI\nManual",
+   "reqd": 1
+  },
+  {
+   "fieldname": "basis",
+   "label": "Basis",
+   "fieldtype": "Select",
+   "options": "\nCurrent Amount\nBase Amount"
+  },
+  {
+   "fieldname": "percent",
+   "label": "Percent",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "fixed_amount",
+   "label": "Fixed Amount",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "frequency",
+   "label": "Frequency",
+   "fieldtype": "Select",
+   "options": "\nAnnual\nSemi-Annual\nCustom",
+   "reqd": 1
+  },
+  {
+   "fieldname": "next_effective_date",
+   "label": "Next Effective Date",
+   "fieldtype": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cap_percent",
+   "label": "Cap Percent",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "floor_percent",
+   "label": "Floor Percent",
+   "fieldtype": "Percent"
+  }
+ ]
+}

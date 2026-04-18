@@ -1,0 +1,13 @@
+{
+ "doctype": "Number Card",
+ "name": "Collection Rate",
+ "label": "Collection Rate (%)",
+ "document_type": "Sales Invoice",
+ "function": "Count",
+ "type": "Custom",
+ "is_public": 1,
+ "module": "Collections",
+ "show_percentage_stats": 0,
+ "color": "#2ecc71",
+ "method": "propio.api.payment_matching.calculate_collection_rate"
+}

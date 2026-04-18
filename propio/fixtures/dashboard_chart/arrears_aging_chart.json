@@ -1,0 +1,16 @@
+{
+ "doctype": "Dashboard Chart",
+ "name": "Arrears Aging Chart",
+ "chart_name": "Arrears Aging",
+ "chart_type": "Group By",
+ "document_type": "Sales Invoice",
+ "group_by_based_on": "due_date",
+ "group_by_type": "Sum",
+ "aggregate_function_based_on": "outstanding_amount",
+ "type": "Bar",
+ "is_public": 1,
+ "module": "Collections",
+  "filters_json": "[]",
+ "time_interval": "Monthly",
+ "timespan": "Last Year"
+}

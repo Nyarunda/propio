@@ -1,0 +1,16 @@
+{
+ "doctype": "Dashboard Chart",
+ "name": "Collections Performance",
+ "chart_name": "Collections Performance",
+ "chart_type": "Group By",
+ "document_type": "Payment Intake",
+ "group_by_based_on": "payment_date",
+ "group_by_type": "Sum",
+ "aggregate_function_based_on": "amount",
+ "type": "Line",
+ "is_public": 1,
+ "module": "Collections",
+  "filters_json": "[]",
+ "time_interval": "Monthly",
+ "timespan": "Last 6 Months"
+}

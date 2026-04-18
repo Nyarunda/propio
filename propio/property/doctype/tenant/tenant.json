@@ -1,0 +1,194 @@
+{
+ "doctype": "DocType",
+ "name": "Tenant",
+ "module": "Property",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "format:TEN-{YYYY}-{#####}",
+ "title_field": "tenant_name",
+ "search_fields": "tenant_name,legal_name,customer,tax_id",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "tenant_name",
+   "label": "Tenant Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nActive\nInactive\nBlocked",
+   "default": "Active",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_identity",
+   "label": "Identity",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tenant_type",
+   "label": "Tenant Type",
+   "fieldtype": "Select",
+   "options": "\nIndividual\nCorporate",
+   "reqd": 1,
+   "default": "Corporate",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "customer",
+   "label": "Customer",
+   "fieldtype": "Link",
+   "options": "Customer"
+  },
+  {
+   "fieldname": "cb_identity_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "legal_name",
+   "label": "Legal Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "trade_name",
+   "label": "Trade Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "sb_compliance",
+   "label": "Compliance & Credit",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tax_id",
+   "label": "Tax ID / VAT",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "registration_no",
+   "label": "Registration No",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "cb_compliance_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "industry",
+   "label": "Industry",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "customer_group",
+   "label": "Customer Group",
+   "fieldtype": "Link",
+   "options": "Customer Group"
+  },
+  {
+   "fieldname": "credit_limit",
+   "label": "Credit Limit",
+   "fieldtype": "Currency",
+   "options": "currency"
+  },
+  {
+   "fieldname": "payment_terms_template",
+   "label": "Payment Terms Template",
+   "fieldtype": "Link",
+   "options": "Payment Terms Template"
+  },
+  {
+   "fieldname": "risk_rating",
+   "label": "Risk Rating",
+   "fieldtype": "Select",
+   "options": "\nLow\nMedium\nHigh\nCritical",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "onboarding_status",
+   "label": "Onboarding Status",
+   "fieldtype": "Select",
+   "options": "\nDraft\nPending Review\nApproved\nRejected",
+   "default": "Draft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "portal_enabled",
+   "label": "Portal Enabled",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "sb_contacts",
+   "label": "Contacts",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "tenant_contacts",
+   "label": "Tenant Contacts",
+   "fieldtype": "Table",
+   "options": "Tenant Contact"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Portfolio Director",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Property Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Leasing Officer",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Collections Officer",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

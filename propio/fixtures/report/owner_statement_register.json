@@ -1,0 +1,14 @@
+{
+ "doctype": "Report",
+ "name": "Owner Statement Register",
+ "report_name": "Owner Statement Register",
+ "ref_doctype": "Owner Statement",
+ "report_type": "Script Report",
+ "module": "Owner",
+ "is_standard": "Yes",
+ "roles": [
+  {"role": "Accountant"},
+  {"role": "Portfolio Director"},
+  {"role": "Owner"}
+ ]
+}

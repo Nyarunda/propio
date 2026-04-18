@@ -1,0 +1,77 @@
+[
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Property Hub",
+    "title": "Property Hub",
+    "label": "Property Hub",
+    "icon": "building-2",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [
+      { "role": "Property Manager" },
+      { "role": "Portfolio Director" }
+    ]
+  },
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Leasing Desk",
+    "title": "Leasing Desk",
+    "label": "Leasing Desk",
+    "icon": "funnel",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [{ "role": "Leasing Officer" }]
+  },
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Maintenance Desk",
+    "title": "Maintenance Desk",
+    "label": "Maintenance Desk",
+    "icon": "wrench",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [{ "role": "Maintenance Coordinator" }]
+  },
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Finance Hub",
+    "title": "Finance Hub",
+    "label": "Finance Hub",
+    "icon": "receipt",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [{ "role": "Accountant" }]
+  },
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Collections Desk",
+    "title": "Collections Desk",
+    "label": "Collections Desk",
+    "icon": "badge-alert",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [{ "role": "Collections Officer" }]
+  },
+  {
+    "doctype": "Workspace",
+    "type": "Workspace",
+    "name": "Owner Hub",
+    "title": "Owner Hub",
+    "label": "Owner Hub",
+    "icon": "landmark",
+    "module": "Propio",
+    "content": "[]",
+    "public": 1,
+    "roles": [{ "role": "Owner" }]
+  }
+]

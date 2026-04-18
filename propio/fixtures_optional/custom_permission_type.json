@@ -1,0 +1,38 @@
+[
+ {
+  "doctype": "Custom Permission Type",
+  "name": "approve_lease",
+  "permission_name": "approve_lease",
+  "description": "Allows user to approve lease agreements"
+ },
+ {
+  "doctype": "Custom Permission Type",
+  "name": "approve_writeoff",
+  "permission_name": "approve_writeoff",
+  "description": "Allows user to approve invoice write-offs"
+ },
+ {
+  "doctype": "Custom Permission Type",
+  "name": "approve_settlement",
+  "permission_name": "approve_settlement",
+  "description": "Allows user to approve owner settlements"
+ },
+ {
+  "doctype": "Custom Permission Type",
+  "name": "override_matching",
+  "permission_name": "override_matching",
+  "description": "Allows user to manually override payment matching"
+ },
+ {
+  "doctype": "Custom Permission Type",
+  "name": "close_arrears_case",
+  "permission_name": "close_arrears_case",
+  "description": "Allows user to close arrears cases"
+ },
+ {
+  "doctype": "Custom Permission Type",
+  "name": "verify_work_order",
+  "permission_name": "verify_work_order",
+  "description": "Allows user to verify completed work orders"
+ }
+]

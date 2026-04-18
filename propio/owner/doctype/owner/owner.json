@@ -1,0 +1,168 @@
+{
+ "doctype": "DocType",
+ "name": "Owner",
+ "module": "Owner",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "format:OWN-{YYYY}-{#####}",
+ "title_field": "owner_name",
+ "search_fields": "owner_name,legal_name,tax_id,portal_email",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "owner_name",
+   "label": "Owner Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "owner_type",
+   "label": "Owner Type",
+   "fieldtype": "Select",
+   "options": "\nIndividual\nCorporate\nFund\nSPV\nTrust\nOther",
+   "reqd": 1,
+   "default": "Individual",
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nActive\nInactive\nBlocked",
+   "default": "Active",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_legal",
+   "label": "Legal Information",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "legal_name",
+   "label": "Legal Name",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "tax_id",
+   "label": "Tax ID / PIN",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "cb_legal_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_no",
+   "label": "Registration No",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "linked_supplier",
+   "label": "Linked Supplier",
+   "fieldtype": "Link",
+   "options": "Supplier",
+   "read_only": 1
+  },
+  {
+   "fieldname": "sb_payout",
+   "label": "Payout Information",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "payout_mode",
+   "label": "Payout Mode",
+   "fieldtype": "Select",
+   "options": "\nBank Transfer\nCheque\nWallet\nOther",
+   "default": "Bank Transfer"
+  },
+  {
+   "fieldname": "bank_account_name",
+   "label": "Bank Account Name",
+   "fieldtype": "Data",
+   "depends_on": "eval:doc.payout_mode == 'Bank Transfer'"
+  },
+  {
+   "fieldname": "bank_account_no",
+   "label": "Bank Account No",
+   "fieldtype": "Data",
+   "depends_on": "eval:doc.payout_mode == 'Bank Transfer'"
+  },
+  {
+   "fieldname": "cb_payout_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bank_name",
+   "label": "Bank Name",
+   "fieldtype": "Data",
+   "depends_on": "eval:doc.payout_mode == 'Bank Transfer'"
+  },
+  {
+   "fieldname": "swift_code",
+   "label": "SWIFT Code",
+   "fieldtype": "Data"
+  },
+  {
+   "fieldname": "sb_portal",
+   "label": "Portal Access",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "portal_enabled",
+   "label": "Portal Enabled",
+   "fieldtype": "Check",
+   "default": "0"
+  },
+  {
+   "fieldname": "portal_email",
+   "label": "Portal Email",
+   "fieldtype": "Data",
+   "depends_on": "eval:doc.portal_enabled == 1"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Portfolio Director",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 1,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Owner",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}

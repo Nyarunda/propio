@@ -1,0 +1,54 @@
+{
+ "doctype": "DocType",
+ "name": "Collections Follow Up",
+ "module": "Propio",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "follow_up_date",
+   "label": "Follow Up Date",
+   "fieldtype": "Date",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contact_method",
+   "label": "Contact Method",
+   "fieldtype": "Select",
+   "options": "\nPhone\nEmail\nSMS\nWhatsApp\nIn Person\nLetter",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "contact_person",
+   "label": "Contact Person",
+   "fieldtype": "Data",
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "outcome",
+   "label": "Outcome",
+   "fieldtype": "Select",
+   "options": "\nNo Answer\nLeft Message\nPromise to Pay\nDisputed\nPayment Plan Agreed\nEscalated\nResolved\nNo Resolution",
+   "reqd": 1
+  },
+  {
+   "fieldname": "next_follow_up_date",
+   "label": "Next Follow Up Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "notes",
+   "label": "Notes",
+   "fieldtype": "Small Text"
+  },
+  {
+   "fieldname": "followed_up_by",
+   "label": "Followed Up By",
+   "fieldtype": "Link",
+   "options": "User",
+   "default": "User"
+  }
+ ]
+}

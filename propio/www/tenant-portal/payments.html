@@ -1,0 +1,111 @@
+{% extends "templates/portal/portal_base.html" %}
+
+{% block title %}Tenant Payments{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <h1 class="h3 mb-1">Make Payment</h1>
+  <p class="text-muted mb-4">Pay outstanding invoices securely.</p>
+
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white"><strong>Payment Form</strong></div>
+        <div class="card-body">
+          <form id="payment-form">
+            <div class="mb-3">
+              <label class="form-label">Invoice</label>
+              <select class="form-select" id="invoice" required>
+                <option value="">Select invoice...</option>
+                {% for inv in invoices %}
+                <option value="{{ inv.name }}" data-amount="{{ inv.outstanding_amount }}">{{ inv.name }} - {{ frappe.utils.fmt_money(inv.outstanding_amount, currency="KES") }}</option>
+                {% endfor %}
+              </select>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Amount</label>
+              <input class="form-control" id="amount" type="number" step="0.01" required>
+            </div>
+            <div class="mb-3">
+              <label class="form-label">Method</label>
+              <select class="form-select" id="method" required>
+                <option value="">Select...</option>
+                <option value="M-Pesa">M-Pesa</option>
+                <option value="Bank Transfer">Bank Transfer</option>
+                <option value="Card">Card</option>
+              </select>
+            </div>
+            <div class="mb-3 d-none" id="phone-wrap">
+              <label class="form-label">M-Pesa Phone</label>
+              <input class="form-control" id="phone" placeholder="2547XXXXXXXX">
+            </div>
+            <button class="btn btn-primary w-100" type="submit">Pay Now</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="card shadow-sm">
+        <div class="card-header bg-white"><strong>Payment History</strong></div>
+        <div class="list-group list-group-flush">
+          {% for p in payments %}
+          <div class="list-group-item d-flex justify-content-between">
+            <div>
+              <div>{{ p.payment_reference or p.name }}</div>
+              <small class="text-muted">{{ frappe.utils.format_datetime(p.payment_date) }} | {{ p.payment_channel }}</small>
+            </div>
+            <div class="text-end">
+              <div>{{ frappe.utils.fmt_money(p.amount, currency="KES") }}</div>
+              <small class="badge bg-secondary">{{ p.status }}</small>
+            </div>
+          </div>
+          {% else %}
+          <div class="list-group-item text-muted">No payments found</div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const invoiceSelect = document.getElementById('invoice');
+const amountInput = document.getElementById('amount');
+const methodSelect = document.getElementById('method');
+const phoneWrap = document.getElementById('phone-wrap');
+
+invoiceSelect?.addEventListener('change', () => {
+  const amount = invoiceSelect.options[invoiceSelect.selectedIndex]?.dataset?.amount;
+  if (amount) amountInput.value = amount;
+});
+methodSelect?.addEventListener('change', () => {
+  phoneWrap.classList.toggle('d-none', methodSelect.value !== 'M-Pesa');
+});
+
+document.getElementById('payment-form')?.addEventListener('submit', async (e) => {
+  e.preventDefault();
+  const r = await fetch('/api/method/propio.portal_utils.payments.process_payment', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'X-Frappe-CSRF-Token': frappe.csrf_token,
+    },
+    body: JSON.stringify({
+      invoice: invoiceSelect.value,
+      amount: amountInput.value,
+      method: methodSelect.value,
+      phone: document.getElementById('phone')?.value,
+    }),
+  });
+  const out = await r.json();
+  if (out.message?.success) {
+    alert('Payment submitted successfully');
+    window.location.reload();
+  } else {
+    alert(out.message?.message || 'Payment failed');
+  }
+});
+</script>
+{% endblock %}

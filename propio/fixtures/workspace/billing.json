@@ -1,0 +1,41 @@
+{
+ "doctype": "Workspace",
+ "name": "Billing",
+ "label": "Billing",
+ "icon": "wallet",
+ "module": "Finance",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 30,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"},
+  {"role": "Accountant"},
+  {"role": "Portfolio Director"}
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Billing Command Center</span><span class=\\\"text-muted ml-2\\\">Invoicing and payment control</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Payment Intake\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Invoices\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Owner Statements\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Billing KPIs</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Outstanding Rent\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Collection Rate\", \"col\": 4}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Unmatched Payments\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Revenue Trend\", \"col\": 12}}]",
+ "shortcuts": [
+  {"label": "New Payment Intake", "link_to": "Payment Intake", "type": "DocType"},
+  {"label": "Sales Invoices", "link_to": "Sales Invoice", "type": "DocType"},
+  {"label": "Owner Statements", "link_to": "Owner Statement", "type": "DocType"}
+ ],
+ "number_cards": [
+  {"number_card_name": "Outstanding Rent"},
+  {"number_card_name": "Collection Rate"},
+  {"number_card_name": "Unmatched Payments"}
+ ],
+ "charts": [
+  {"chart_name": "Revenue Trend"}
+ ],
+ "links": [
+  {"label": "Billing", "type": "Card Break"},
+  {"label": "Payment Intake", "link_to": "Payment Intake", "link_type": "DocType", "type": "Link"},
+  {"label": "Sales Invoice", "link_to": "Sales Invoice", "link_type": "DocType", "type": "Link"},
+  {"label": "Owner Statement", "link_to": "Owner Statement", "link_type": "DocType", "type": "Link"},
+  {"label": "Reports", "type": "Card Break"},
+  {"label": "Aging Report", "link_to": "Aging Report", "link_type": "Report", "type": "Link"},
+  {"label": "Owner Statement Register", "link_to": "Owner Statement Register", "link_type": "Report", "type": "Link"}
+ ],
+ "title": "Billing",
+ "type": "Workspace"
+}

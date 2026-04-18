@@ -1,0 +1,44 @@
+{
+ "doctype": "Workspace",
+ "name": "Collections",
+ "label": "Collections",
+ "icon": "alert-triangle",
+ "module": "Collections",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 40,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"},
+  {"role": "Accountant"},
+  {"role": "Collections Officer"},
+  {"role": "Portfolio Director"}
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Collections Command Center</span><span class=\\\"text-muted ml-2\\\">Arrears and follow-up operations</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Arrears Case\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Log Follow Up\", \"col\": 4}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Intake\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Collections KPIs</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Arrears\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Arrears Cases\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Follow Ups Due Today\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Broken Promises\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Arrears Aging Chart\", \"col\": 6}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Collections Performance\", \"col\": 6}}]",
+ "shortcuts": [
+  {"label": "New Arrears Case", "link_to": "Arrears Case", "type": "DocType"},
+  {"label": "Log Follow Up", "link_to": "Collections Follow Up", "type": "DocType"},
+  {"label": "Payment Intake", "link_to": "Payment Intake", "type": "DocType"}
+ ],
+ "number_cards": [
+  {"number_card_name": "Total Arrears"},
+  {"number_card_name": "Open Arrears Cases"},
+  {"number_card_name": "Follow Ups Due Today"},
+  {"number_card_name": "Broken Promises"}
+ ],
+ "charts": [
+  {"chart_name": "Arrears Aging Chart"},
+  {"chart_name": "Collections Performance"}
+ ],
+ "links": [
+  {"label": "Collections", "type": "Card Break"},
+  {"label": "Arrears Case", "link_to": "Arrears Case", "link_type": "DocType", "type": "Link"},
+  {"label": "Collections Follow Up", "link_to": "Collections Follow Up", "link_type": "DocType", "type": "Link"},
+  {"label": "Payment Intake", "link_to": "Payment Intake", "link_type": "DocType", "type": "Link"},
+  {"label": "Reports", "type": "Card Break"},
+  {"label": "Aging Report", "link_to": "Aging Report", "link_type": "Report", "type": "Link"},
+  {"label": "Collections Performance Report", "link_to": "Collections Performance Report", "link_type": "Report", "type": "Link"}
+ ],
+ "title": "Collections",
+ "type": "Workspace"
+}

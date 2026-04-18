@@ -1,0 +1,13 @@
+{
+ "doctype": "Number Card",
+ "name": "Follow Ups Due Today",
+ "label": "Follow Ups Due Today",
+ "document_type": "Arrears Case",
+ "function": "Count",
+ "type": "Document Type",
+ "is_public": 1,
+ "module": "Collections",
+ "show_percentage_stats": 0,
+ "filters_json": "[[\"Arrears Case\",\"next_action_date\",\"=\",\"Today\",false],[\"Arrears Case\",\"status\",\"=\",\"Open\",false]]",
+ "color": "#3498db"
+}

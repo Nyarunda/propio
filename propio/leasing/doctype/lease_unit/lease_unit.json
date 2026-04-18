@@ -1,0 +1,38 @@
+{
+ "doctype": "DocType",
+ "name": "Lease Unit",
+ "module": "Leasing",
+ "custom": 0,
+ "istable": 1,
+ "fields": [
+  {
+   "fieldname": "unit",
+   "label": "Unit",
+   "fieldtype": "Link",
+   "options": "Unit",
+   "reqd": 1,
+   "in_list_view": 1
+  },
+  {
+   "fieldname": "area",
+   "label": "Area (sqm)",
+   "fieldtype": "Float",
+   "precision": "2"
+  },
+  {
+   "fieldname": "allocation_percent",
+   "label": "Allocation %",
+   "fieldtype": "Percent"
+  },
+  {
+   "fieldname": "start_date",
+   "label": "Start Date",
+   "fieldtype": "Date"
+  },
+  {
+   "fieldname": "end_date",
+   "label": "End Date",
+   "fieldtype": "Date"
+  }
+ ]
+}

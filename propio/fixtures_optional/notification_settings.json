@@ -1,0 +1,15 @@
+{
+ "doctype": "System Settings",
+ "propio_notification_enabled": 1,
+ "propio_in_app_alerts": 1,
+ "propio_email_notifications": 1,
+ "propio_whatsapp_notifications": 0,
+ "propio_reminder_days": [
+  60,
+  30,
+  14,
+  7
+ ],
+ "propio_auto_escalate_days": 30,
+ "name": "System Settings"
+}

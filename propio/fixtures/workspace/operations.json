@@ -1,0 +1,36 @@
+{
+ "doctype": "Workspace",
+ "name": "Operations",
+ "label": "Operations",
+ "icon": "wrench",
+ "module": "Propio Maintenance",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 60,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"},
+  {"role": "Property Manager"},
+  {"role": "Maintenance Coordinator"}
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Operations Command Center</span><span class=\\\"text-muted ml-2\\\">Maintenance and work order operations</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Work Order\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Open Work Orders\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Operations KPIs</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Work Orders\", \"col\": 6}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Monthly Completed Work Order\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Work Order Analysis\", \"col\": 12}}]",
+ "shortcuts": [
+  {"label": "New Work Order", "link_to": "Work Order", "type": "DocType"},
+  {"label": "Open Work Orders", "link_to": "Work Order", "type": "DocType"}
+ ],
+ "number_cards": [
+  {"number_card_name": "Open Work Orders"},
+  {"number_card_name": "Monthly Completed Work Order"}
+ ],
+ "charts": [
+  {"chart_name": "Work Order Analysis"}
+ ],
+ "links": [
+  {"label": "Operations", "type": "Card Break"},
+  {"label": "Work Order", "link_to": "Work Order", "link_type": "DocType", "type": "Link"},
+  {"label": "Reports", "type": "Card Break"},
+  {"label": "Collections Performance Report", "link_to": "Collections Performance Report", "link_type": "Report", "type": "Link"}
+ ],
+ "title": "Operations",
+ "type": "Workspace"
+}

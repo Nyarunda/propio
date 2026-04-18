@@ -1,0 +1,158 @@
+{
+ "doctype": "Workspace",
+ "name": "Finance Hub",
+ "label": "Finance Hub",
+ "icon": "wallet",
+ "module": "Finance",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 40,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Accountant"
+  },
+  {
+   "role": "Portfolio Director"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Finance Hub</span><span class=\\\"text-muted ml-2\\\">Revenue, receivables, and reconciliation</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Record Payment\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Sales Invoices\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Owner Statements\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Run Scheduled Tasks\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Key Metrics</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Billed This Month\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Collected This Month\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Outstanding Invoices\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Overdue Amount\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Finance Operations</b>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Billing\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Payments\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Owner\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Insights</b>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Revenue Trend\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Collections Trend\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Arrears Aging\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "label": "Record Payment",
+   "link_to": "Payment Intake",
+   "type": "DocType"
+  },
+  {
+   "label": "Sales Invoices",
+   "link_to": "Sales Invoice",
+   "type": "DocType"
+  },
+  {
+   "label": "Owner Statements",
+   "link_to": "Owner Statement",
+   "type": "DocType"
+  },
+  {
+   "label": "Run Scheduled Tasks",
+   "link_to": "propio-operations",
+   "type": "Page"
+  }
+ ],
+ "number_cards": [
+  {
+   "number_card_name": "Billed This Month"
+  },
+  {
+   "number_card_name": "Collected This Month"
+  },
+  {
+   "number_card_name": "Outstanding Invoices"
+  },
+  {
+   "number_card_name": "Overdue Amount"
+  }
+ ],
+ "charts": [
+  {
+   "chart_name": "Revenue Trend"
+  },
+  {
+   "chart_name": "Collections Trend"
+  },
+  {
+   "chart_name": "Arrears Aging"
+  }
+ ],
+ "links": [
+  {
+   "label": "Billing",
+   "type": "Card Break"
+  },
+  {
+   "label": "Sales Invoice",
+   "link_to": "Sales Invoice",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Entry",
+   "link_to": "Payment Entry",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner",
+   "type": "Card Break"
+  },
+  {
+   "label": "Owner",
+   "link_to": "Owner",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Management Agreement",
+   "link_to": "Management Agreement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Property Ownership",
+   "link_to": "Property Ownership",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Reports",
+   "type": "Card Break"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Performance Report",
+   "link_to": "Collections Performance Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement Register",
+   "link_to": "Owner Statement Register",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Operations",
+   "type": "Card Break"
+  },
+  {
+   "label": "Run Scheduled Tasks",
+   "link_to": "propio-operations",
+   "link_type": "Page",
+   "type": "Link"
+  }
+ ],
+ "title": "Finance Hub",
+ "type": "Workspace"
+}

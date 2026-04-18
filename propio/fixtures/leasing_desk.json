@@ -1,0 +1,145 @@
+{
+ "doctype": "Workspace",
+ "name": "Leasing Desk",
+ "label": "Leasing Desk",
+ "icon": "file-text",
+ "module": "Leasing",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 20,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Leasing Officer"
+  },
+  {
+   "role": "Property Manager"
+  },
+  {
+   "role": "Portfolio Director"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Leasing Desk</span><span class=\\\"text-muted ml-2\\\">Lease lifecycle and renewals</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Lease\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lease Register\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Active Lease Report\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Lease Expiry Report\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Key Metrics</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Active Leases\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Expiring in 30 Days\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Approvals\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Renewals Due\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Leasing Operations</b>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Pipeline\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Documents\", \"col\": 4}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 4}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Leasing Insights</b>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Lease Expiry Trend\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Lease Status Distribution\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Monthly Lease Revenue\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "label": "New Lease",
+   "link_to": "Lease",
+   "type": "DocType"
+  },
+  {
+   "label": "Open Leases",
+   "link_to": "Lease",
+   "type": "DocType"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "type": "DocType"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "type": "DocType"
+  }
+ ],
+ "number_cards": [
+  {
+   "number_card_name": "Active Leases"
+  },
+  {
+   "number_card_name": "Expiring in 30 Days"
+  },
+  {
+   "number_card_name": "Pending Approvals"
+  },
+  {
+   "number_card_name": "Renewals Due"
+  }
+ ],
+ "links": [
+  {
+   "label": "Lease Management",
+   "type": "Card Break"
+  },
+  {
+   "label": "Lease",
+   "link_to": "Lease",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Tenant",
+   "link_to": "Tenant",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Unit",
+   "link_to": "Unit",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner",
+   "link_to": "Owner",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Finance",
+   "type": "Card Break"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement",
+   "link_to": "Owner Statement",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Reports",
+   "type": "Card Break"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Performance Report",
+   "link_to": "Collections Performance Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement Register",
+   "link_to": "Owner Statement Register",
+   "link_type": "Report",
+   "type": "Link"
+  }
+ ],
+ "title": "Leasing Desk",
+ "type": "Workspace",
+ "charts": [
+  {
+   "chart_name": "Lease Expiry Trend"
+  },
+  {
+   "chart_name": "Lease Status Distribution"
+  },
+  {
+   "chart_name": "Monthly Lease Revenue"
+  }
+ ]
+}

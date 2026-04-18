@@ -1,0 +1,83 @@
+[
+ {
+  "doctype": "Module Profile",
+  "name": "Property Ops Modules",
+  "module_profile_name": "Property Ops Modules",
+  "block_modules": [
+   {"module": "Propio"},
+   {"module": "Accounts"},
+   {"module": "Buying"},
+   {"module": "Selling"},
+   {"module": "Stock"},
+   {"module": "CRM"},
+   {"module": "HR"},
+   {"module": "Projects"}
+  ],
+  "allow_all_modules": 0
+ },
+ {
+  "doctype": "Module Profile",
+  "name": "Leasing Modules",
+  "module_profile_name": "Leasing Modules",
+  "block_modules": [
+   {"module": "Accounts"},
+   {"module": "Buying"},
+   {"module": "Stock"},
+   {"module": "HR"},
+   {"module": "Projects"}
+  ],
+  "allow_all_modules": 0
+ },
+ {
+  "doctype": "Module Profile",
+  "name": "Maintenance Modules",
+  "module_profile_name": "Maintenance Modules",
+  "block_modules": [
+   {"module": "Accounts"},
+   {"module": "Buying"},
+   {"module": "Selling"},
+   {"module": "HR"},
+   {"module": "Projects"}
+  ],
+  "allow_all_modules": 0
+ },
+ {
+  "doctype": "Module Profile",
+  "name": "Finance Modules",
+  "module_profile_name": "Finance Modules",
+  "block_modules": [
+   {"module": "CRM"},
+   {"module": "HR"},
+   {"module": "Projects"},
+   {"module": "Stock"}
+  ],
+  "allow_all_modules": 0
+ },
+ {
+  "doctype": "Module Profile",
+  "name": "Collections Modules",
+  "module_profile_name": "Collections Modules",
+  "block_modules": [
+   {"module": "Buying"},
+   {"module": "Stock"},
+   {"module": "HR"},
+   {"module": "Projects"}
+  ],
+  "allow_all_modules": 0
+ },
+ {
+  "doctype": "Module Profile",
+  "name": "Owner Modules",
+  "module_profile_name": "Owner Modules",
+  "block_modules": [
+   {"module": "Accounts"},
+   {"module": "Buying"},
+   {"module": "Selling"},
+   {"module": "Stock"},
+   {"module": "CRM"},
+   {"module": "HR"},
+   {"module": "Projects"}
+  ],
+  "allow_all_modules": 0
+ }
+]

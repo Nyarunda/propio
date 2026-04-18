@@ -1,0 +1,130 @@
+{
+ "doctype": "DocType",
+ "name": "Portfolio",
+ "module": "Property",
+ "custom": 0,
+ "istable": 0,
+ "is_submittable": 0,
+ "track_changes": 1,
+ "allow_rename": 0,
+ "autoname": "field:portfolio_code",
+ "title_field": "portfolio_name",
+ "search_fields": "portfolio_code,portfolio_name,company",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "fields": [
+  {
+   "fieldname": "portfolio_code",
+   "label": "Portfolio Code",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "unique": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "portfolio_name",
+   "label": "Portfolio Name",
+   "fieldtype": "Data",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "status",
+   "label": "Status",
+   "fieldtype": "Select",
+   "options": "\nDraft\nActive\nInactive\nArchived",
+   "default": "Active",
+   "reqd": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "sb_org",
+   "label": "Organization",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "company",
+   "label": "Company",
+   "fieldtype": "Link",
+   "options": "Company",
+   "reqd": 1,
+   "in_standard_filter": 1
+  },
+  {
+   "fieldname": "country",
+   "label": "Country",
+   "fieldtype": "Link",
+   "options": "Country",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cb_org_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "base_currency",
+   "label": "Base Currency",
+   "fieldtype": "Link",
+   "options": "Currency",
+   "reqd": 1
+  },
+  {
+   "fieldname": "sb_notes",
+   "label": "Notes",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "description",
+   "label": "Description",
+   "fieldtype": "Small Text"
+  }
+ ],
+ "permissions": [
+  {
+   "role": "System Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Administrator",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 1
+  },
+  {
+   "role": "Portfolio Director",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Property Manager",
+   "read": 1,
+   "write": 1,
+   "create": 1,
+   "delete": 0
+  },
+  {
+   "role": "Leasing Officer",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  },
+  {
+   "role": "Accountant",
+   "read": 1,
+   "write": 0,
+   "create": 0,
+   "delete": 0
+  }
+ ]
+}
+

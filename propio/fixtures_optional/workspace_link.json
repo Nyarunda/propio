@@ -1,0 +1,118 @@
+[
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Masters",
+  "type": "Card Break",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Property",
+  "link_to": "Property",
+  "link_type": "DocType",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Unit",
+  "link_to": "Unit",
+  "link_type": "DocType",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Tenant",
+  "link_to": "Tenant",
+  "link_type": "DocType",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Operations",
+  "type": "Card Break",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Lease",
+  "link_to": "Lease",
+  "link_type": "DocType",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Work Order",
+  "link_to": "Work Order",
+  "link_type": "DocType",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Reports",
+  "type": "Card Break",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Property Register",
+  "link_to": "Property Register",
+  "link_type": "Report",
+  "report_ref_doctype": "Property",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ },
+ {
+  "doctype": "Workspace Link",
+  "parent": "Property Hub",
+  "parentfield": "links",
+  "parenttype": "Workspace",
+  "label": "Lease Expiry Report",
+  "link_to": "Lease Expiry Report",
+  "link_type": "Report",
+  "report_ref_doctype": "Lease",
+  "type": "Link",
+  "hidden": 0,
+  "onboard": 0
+ }
+]

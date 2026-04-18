@@ -1,0 +1,214 @@
+[
+ {
+  "doctype": "Workflow",
+  "name": "Lease Workflow",
+  "workflow_name": "Lease Workflow",
+  "document_type": "Lease",
+  "is_active": 1,
+  "send_email_alert": 1,
+  "workflow_state_field": "status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Leasing Officer"
+   },
+   {
+    "state": "Pending Approval",
+    "doc_status": "0",
+    "allow_edit": "Property Manager"
+   },
+   {
+    "state": "Approved",
+    "doc_status": "0",
+    "allow_edit": "Portfolio Director"
+   },
+   {
+    "state": "Active",
+    "doc_status": "1",
+    "allow_edit": "Property Manager"
+   },
+   {
+    "state": "Expiring Soon",
+    "doc_status": "1",
+    "allow_edit": "Property Manager"
+   },
+   {
+    "state": "Renewed",
+    "doc_status": "1",
+    "allow_edit": "Leasing Officer"
+   },
+   {
+    "state": "Terminated",
+    "doc_status": "1",
+    "allow_edit": "Property Manager"
+   },
+   {
+    "state": "Closed",
+    "doc_status": "1",
+    "allow_edit": "Property Manager"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": "0",
+    "allow_edit": "Leasing Officer"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Submit for Approval",
+    "state": "Draft",
+    "next_state": "Pending Approval",
+    "allowed": "Leasing Officer",
+    "allow_self_approval": 1,
+    "condition": "doc.lease_units and doc.lease_charges"
+   },
+   {
+    "action": "Approve",
+    "state": "Pending Approval",
+    "next_state": "Approved",
+    "allowed": "Property Manager",
+    "condition": "doc.tenant and doc.property"
+   },
+   {
+    "action": "Reject",
+    "state": "Pending Approval",
+    "next_state": "Rejected",
+    "allowed": "Property Manager",
+    "condition": ""
+   },
+   {
+    "action": "Activate Lease",
+    "state": "Approved",
+    "next_state": "Active",
+    "allowed": "Property Manager",
+    "condition": "doc.start_date"
+   },
+   {
+    "action": "Mark Expiring",
+    "state": "Active",
+    "next_state": "Expiring Soon",
+    "allowed": "System Manager",
+    "condition": "doc.end_date"
+   },
+   {
+    "action": "Renew Lease",
+    "state": "Expiring Soon",
+    "next_state": "Renewed",
+    "allowed": "Leasing Officer",
+    "condition": ""
+   },
+   {
+    "action": "Terminate",
+    "state": "Active",
+    "next_state": "Terminated",
+    "allowed": "Property Manager",
+    "condition": ""
+   },
+   {
+    "action": "Close",
+    "state": "Terminated",
+    "next_state": "Closed",
+    "allowed": "Property Manager",
+    "condition": ""
+   },
+   {
+    "action": "Reopen",
+    "state": "Closed",
+    "next_state": "Active",
+    "allowed": "System Manager",
+    "condition": ""
+   }
+  ]
+ },
+ {
+  "doctype": "Workflow",
+  "name": "Payment Intake Workflow",
+  "workflow_name": "Payment Intake Workflow",
+  "document_type": "Payment Intake",
+  "is_active": 1,
+  "send_email_alert": 0,
+  "workflow_state_field": "status",
+  "states": [
+   {
+    "state": "Draft",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   },
+   {
+    "state": "Received",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   },
+   {
+    "state": "Matched",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   },
+   {
+    "state": "Partially Matched",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   },
+   {
+    "state": "Unmatched",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   },
+   {
+    "state": "Posted",
+    "doc_status": "0",
+    "allow_edit": "System Manager"
+   },
+   {
+    "state": "Rejected",
+    "doc_status": "0",
+    "allow_edit": "Accountant"
+   }
+  ],
+  "transitions": [
+   {
+    "action": "Mark Received",
+    "state": "Draft",
+    "next_state": "Received",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   },
+   {
+    "action": "Mark Matched",
+    "state": "Received",
+    "next_state": "Matched",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   },
+   {
+    "action": "Mark Partial",
+    "state": "Received",
+    "next_state": "Partially Matched",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   },
+   {
+    "action": "Mark Unmatched",
+    "state": "Received",
+    "next_state": "Unmatched",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   },
+   {
+    "action": "Post",
+    "state": "Matched",
+    "next_state": "Posted",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   },
+   {
+    "action": "Reject",
+    "state": "Received",
+    "next_state": "Rejected",
+    "allowed": "Accountant",
+    "allow_self_approval": 1
+   }
+  ]
+ }
+]

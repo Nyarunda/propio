@@ -1,0 +1,40 @@
+{
+ "doctype": "Workspace",
+ "name": "Owners",
+ "label": "Owners",
+ "icon": "users",
+ "module": "Owner",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 50,
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Administrator"},
+  {"role": "Portfolio Director"},
+  {"role": "Accountant"},
+  {"role": "Owner"}
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Owners Command Center</span><span class=\\\"text-muted ml-2\\\">Owner agreements and statement control</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Management Agreement\", \"col\": 6}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Owner Statement\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Owner KPIs</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Management Agreements\", \"col\": 6}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Collection Rate\", \"col\": 6}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Revenue Trend\", \"col\": 12}}]",
+ "shortcuts": [
+  {"label": "New Management Agreement", "link_to": "Management Agreement", "type": "DocType"},
+  {"label": "New Owner Statement", "link_to": "Owner Statement", "type": "DocType"}
+ ],
+ "number_cards": [
+  {"number_card_name": "Total Management Agreements"},
+  {"number_card_name": "Collection Rate"}
+ ],
+ "charts": [
+  {"chart_name": "Revenue Trend"}
+ ],
+ "links": [
+  {"label": "Owners", "type": "Card Break"},
+  {"label": "Owner", "link_to": "Owner", "link_type": "DocType", "type": "Link"},
+  {"label": "Property Ownership", "link_to": "Property Ownership", "link_type": "DocType", "type": "Link"},
+  {"label": "Management Agreement", "link_to": "Management Agreement", "link_type": "DocType", "type": "Link"},
+  {"label": "Owner Statement", "link_to": "Owner Statement", "link_type": "DocType", "type": "Link"},
+  {"label": "Reports", "type": "Card Break"},
+  {"label": "Owner Statement Register", "link_to": "Owner Statement Register", "link_type": "Report", "type": "Link"}
+ ],
+ "title": "Owners",
+ "type": "Workspace"
+}

@@ -1,0 +1,139 @@
+{
+ "doctype": "Workspace",
+ "name": "Collections Desk",
+ "label": "Collections Desk",
+ "icon": "alert-triangle",
+ "module": "Collections",
+ "public": 1,
+ "is_hidden": 0,
+ "sequence_id": 50,
+ "roles": [
+  {
+   "role": "System Manager"
+  },
+  {
+   "role": "Administrator"
+  },
+  {
+   "role": "Accountant"
+  },
+  {
+   "role": "Collections Officer"
+  },
+  {
+   "role": "Credit Controller"
+  }
+ ],
+ "content": "[{\"type\": \"header\", \"data\": {\"text\": \"<span class=\\\"h3\\\">Collections Desk</span><span class=\\\"text-muted ml-2\\\">Arrears cases and payment follow-up</span>\", \"col\": 12}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Quick Actions</b>\", \"col\": 12}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"New Arrears Case\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Log Follow Up\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Payment Intake\", \"col\": 3}}, {\"type\": \"shortcut\", \"data\": {\"shortcut_name\": \"Collections Summary\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Key Metrics</b>\", \"col\": 12}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Arrears\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Open Arrears Cases\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Unmatched Payments\", \"col\": 3}}, {\"type\": \"number_card\", \"data\": {\"number_card_name\": \"Collection Rate\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Collections Operations</b>\", \"col\": 12}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Cases\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Resolutions\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Reports\", \"col\": 3}}, {\"type\": \"card\", \"data\": {\"card_name\": \"Operations\", \"col\": 3}}, {\"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"type\": \"header\", \"data\": {\"text\": \"<b>Insights</b>\", \"col\": 12}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Arrears Aging\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Collections Performance\", \"col\": 4}}, {\"type\": \"chart\", \"data\": {\"chart_name\": \"Payment Channel Distribution\", \"col\": 4}}]",
+ "shortcuts": [
+  {
+   "label": "New Arrears Case",
+   "link_to": "Arrears Case",
+   "type": "DocType"
+  },
+  {
+   "label": "Log Follow Up",
+   "link_to": "Collections Follow Up",
+   "type": "DocType"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "type": "DocType"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "type": "Report"
+  }
+ ],
+ "number_cards": [
+  {
+   "number_card_name": "Total Arrears"
+  },
+  {
+   "number_card_name": "Open Arrears Cases"
+  },
+  {
+   "number_card_name": "Unmatched Payments"
+  },
+  {
+   "number_card_name": "Collection Rate"
+  }
+ ],
+ "charts": [
+  {
+   "chart_name": "Arrears Aging"
+  },
+  {
+   "chart_name": "Collections Performance"
+  },
+  {
+   "chart_name": "Payment Channel Distribution"
+  }
+ ],
+ "links": [
+  {
+   "label": "Cases",
+   "type": "Card Break"
+  },
+  {
+   "label": "Arrears Case",
+   "link_to": "Arrears Case",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Follow Up",
+   "link_to": "Collections Follow Up",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Intake",
+   "link_to": "Payment Intake",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Payment Intake Allocation",
+   "link_to": "Payment Intake Allocation",
+   "link_type": "DocType",
+   "type": "Link"
+  },
+  {
+   "label": "Reports",
+   "type": "Card Break"
+  },
+  {
+   "label": "Aging Report",
+   "link_to": "Aging Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Collections Performance Report",
+   "link_to": "Collections Performance Report",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Owner Statement Register",
+   "link_to": "Owner Statement Register",
+   "link_type": "Report",
+   "type": "Link"
+  },
+  {
+   "label": "Operations",
+   "type": "Card Break"
+  },
+  {
+   "label": "Run Scheduled Tasks",
+   "link_to": "propio-operations",
+   "link_type": "Page",
+   "type": "Link"
+  }
+ ],
+ "title": "Collections Desk",
+ "type": "Workspace"
+}

@@ -1,0 +1,82 @@
+{% extends "templates/portal/portal_base.html" %}
+
+{% block title %}Tenant Maintenance{% endblock %}
+
+{% block content %}
+<div class="container py-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <div>
+      <h1 class="h3 mb-1">Maintenance Requests</h1>
+      <p class="text-muted mb-0">Submit and track service issues.</p>
+    </div>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#newRequestModal">New Request</button>
+  </div>
+
+  <div class="card shadow-sm">
+    <div class="table-responsive">
+      <table class="table table-hover mb-0">
+        <thead class="table-light"><tr><th>ID</th><th>Type</th><th>Description</th><th>Status</th><th>Priority</th><th>Date</th></tr></thead>
+        <tbody>
+          {% for req in requests %}
+          <tr>
+            <td>{{ req.name }}</td>
+            <td>{{ req.request_type }}</td>
+            <td>{{ (req.description or '')[:70] }}</td>
+            <td><span class="badge bg-secondary">{{ req.status }}</span></td>
+            <td>{{ req.priority }}</td>
+            <td>{{ frappe.utils.format_datetime(req.creation) }}</td>
+          </tr>
+          {% else %}
+          <tr><td colspan="6" class="text-center text-muted py-4">No maintenance requests</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="newRequestModal" tabindex="-1">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header"><h5 class="modal-title">New Maintenance Request</h5><button type="button" class="btn-close" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <form id="maintenance-form">
+          <div class="mb-3"><label class="form-label">Issue Type</label><input class="form-control" id="request_type" required></div>
+          <div class="mb-3"><label class="form-label">Priority</label><select class="form-select" id="priority"><option>Low</option><option>Medium</option><option>High</option><option>Urgent</option></select></div>
+          <div class="mb-3"><label class="form-label">Description</label><textarea class="form-control" id="description" rows="4" required></textarea></div>
+          <div class="mb-3"><label class="form-label">Preferred Time</label><input class="form-control" type="datetime-local" id="preferred_time"></div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary" id="submit-request">Submit</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.getElementById('submit-request')?.addEventListener('click', async () => {
+  const payload = {
+    request_type: document.getElementById('request_type').value,
+    priority: document.getElementById('priority').value,
+    description: document.getElementById('description').value,
+    preferred_time: document.getElementById('preferred_time').value,
+  };
+  const r = await fetch('/api/method/propio.portal_utils.tenant.submit_maintenance_request', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json', 'X-Frappe-CSRF-Token': frappe.csrf_token},
+    body: JSON.stringify(payload),
+  });
+  const out = await r.json();
+  if (out.message?.success) {
+    alert('Request submitted successfully');
+    window.location.reload();
+  } else {
+    alert(out.message?.message || 'Failed to submit request');
+  }
+});
+</script>
+{% endblock %}

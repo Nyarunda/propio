@@ -1,0 +1,89 @@
+{
+ "doctype": "Workflow",
+ "name": "Payment Intake Workflow",
+ "workflow_name": "Payment Intake Workflow",
+ "document_type": "Payment Intake",
+ "is_active": 1,
+ "send_email_alert": 0,
+ "states": [
+  {
+   "state": "Draft",
+   "doc_status": "0",
+   "allow_edit": "Accountant"
+  },
+  {
+   "state": "Received",
+   "doc_status": "0",
+   "allow_edit": "Accountant"
+  },
+  {
+   "state": "Matched",
+   "doc_status": "0",
+   "allow_edit": "Accountant"
+  },
+  {
+   "state": "Partially Matched",
+   "doc_status": "0",
+   "allow_edit": "Accountant"
+  },
+  {
+   "state": "Unmatched",
+   "doc_status": "0",
+   "allow_edit": "Accountant"
+  },
+  {
+   "state": "Posted",
+   "doc_status": "1",
+   "allow_edit": "System Manager"
+  },
+  {
+   "state": "Rejected",
+   "doc_status": "2",
+   "allow_edit": "Accountant"
+  }
+ ],
+ "transitions": [
+  {
+   "action": "Mark Received",
+   "state": "Draft",
+   "next_state": "Received",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  },
+  {
+   "action": "Mark Matched",
+   "state": "Received",
+   "next_state": "Matched",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  },
+  {
+   "action": "Mark Partial",
+   "state": "Received",
+   "next_state": "Partially Matched",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  },
+  {
+   "action": "Mark Unmatched",
+   "state": "Received",
+   "next_state": "Unmatched",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  },
+  {
+   "action": "Post",
+   "state": "Matched",
+   "next_state": "Posted",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  },
+  {
+   "action": "Reject",
+   "state": "Received",
+   "next_state": "Rejected",
+   "allowed": "Accountant",
+   "allow_self_approval": 1
+  }
+ ]
+}

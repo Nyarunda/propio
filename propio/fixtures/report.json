@@ -1,0 +1,45 @@
+[
+ {
+  "doctype": "Report",
+  "name": "Aging Report",
+  "report_name": "Aging Report",
+  "ref_doctype": "Sales Invoice",
+  "report_type": "Script Report",
+  "module": "Propio",
+  "is_standard": "Yes",
+  "roles": [
+   {"role": "Accountant"},
+   {"role": "Collections Officer"},
+   {"role": "Property Manager"},
+   {"role": "Portfolio Director"}
+  ]
+ },
+ {
+  "doctype": "Report",
+  "name": "Collections Performance Report",
+  "report_name": "Collections Performance Report",
+  "ref_doctype": "Payment Intake",
+  "report_type": "Script Report",
+  "module": "Propio",
+  "is_standard": "Yes",
+  "roles": [
+   {"role": "Collections Officer"},
+   {"role": "Accountant"},
+   {"role": "Portfolio Director"}
+  ]
+ },
+ {
+  "doctype": "Report",
+  "name": "Owner Statement Register",
+  "report_name": "Owner Statement Register",
+  "ref_doctype": "Owner Statement",
+  "report_type": "Script Report",
+  "module": "Propio",
+  "is_standard": "Yes",
+  "roles": [
+   {"role": "Accountant"},
+   {"role": "Portfolio Director"},
+   {"role": "Owner"}
+  ]
+ }
+]

@@ -1,0 +1,13 @@
+{
+ "doctype": "Number Card",
+ "name": "Open Arrears Cases",
+ "label": "Open Arrears Cases",
+ "document_type": "Arrears Case",
+ "function": "Count",
+ "type": "Document Type",
+ "is_public": 1,
+ "module": "Collections",
+ "show_percentage_stats": 0,
+ "filters_json": "[[\"Arrears Case\",\"status\",\"=\",\"Open\",false]]",
+ "color": "#f39c12"
+}
